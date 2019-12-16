@@ -73,8 +73,10 @@
     </style>
 
     <script>
+      // Selects input sliders
       const inputs = document.querySelectorAll(".controls input");
 
+      // Handles CSS variable updates for input sliders
       function handleUpdate() {
         const suffix = this.dataset.sizing || "";
         document.documentElement.style.setProperty(
@@ -83,7 +85,9 @@
         );
       }
 
+      // Listens for each change in the input sliders
       inputs.forEach(input => input.addEventListener("change", handleUpdate));
+      // Listens for each mouse move on input sliders
       inputs.forEach(input =>
         input.addEventListener("mousemove", handleUpdate)
       );
